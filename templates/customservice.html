@@ -11,8 +11,8 @@
     <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Server Status Logo"> 
     <h1>{{ servicename }} Status</h1>
     <p>This page now displays the status of {{ servicename }} with many details.</p>
-    <p>Click the button below to refresh.</p>
-    <button name="refresh" type="button" onclick="window.location.reload();">Refresh</button>
+    <p>Click the button below to go back.</p>
+    <button class="return" type="button" onclick="history.back()">Return</button>
     <br>
     <div class="TerminalContainer">
         <div class="TerminalTitleBarContainer">

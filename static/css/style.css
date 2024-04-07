@@ -1,27 +1,41 @@
+/* Global Styles */
 * {
-    margin: 0;
+    margin: 0.25rem;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Roboto', sans-serif;
     background-color: #333;
     color: whitesmoke;
     min-height: 100vh;
-    display: flex;  /* Enable flexbox for the body */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
     text-align: center;
-    gap: 16px;  /* Add spacing between elements */
-    font-size: 24px;
-}
-
-button {
-    font-size: 24px;
+    gap: 1.5rem; /* Increased gap for larger font size */
+    font-size: 1.5rem; /* Increased base font size */
+  }
+  
+  /* Buttons */
+  button,
+  input {
+    font-size: 1.25rem; /* Slightly smaller than body for distinction */
     font-weight: bold;
-    padding: 10px;
+    margin: 0.5rem;
+    padding: 1rem; /* Increased padding for larger font size */
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #333;
+  }
+
+.refresh,
+.return {
+    font-size: 1rem;
+    font-weight: bold;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -29,54 +43,77 @@ button {
     color: #333;
 }
 
-input {
-    font-size: 24px;
-    padding: 10px;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    background-color: whitesmoke;
-    color: #333;
+.Boxcontainer {
+    /* Styles for the container div */
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* Media query for mobile devices (adjust the breakpoint as needed) */
+  @media only screen and (max-width: 768px) {
+    .Boxcontainer {
+      /* Styles for mobile */
+      flex-wrap: wrap; /* Wrap child elements on smaller screens */
+      justify-content: center; /* Center elements on smaller screens (optional) */
+    }
 }
 
-.container {  /* Styles for the container div */
-    width: 1200px;
-    display: flex;  /* Make the container a flexbox container */
-    justify-content: space-between; /* Add space between child elements */
+.TerminalContainer,
+.TerminalTextContainer,
+.TerminalTitleBarContainer {
+    margin: 0;
 }
 
 .TerminalContainer {
     border-radius: 0.5rem;
     border: black 2px solid;
+    min-width: 90%;
+    max-width: 100%;
+    max-height: 60vh;
 }
 
 .TerminalTitleBarContainer {
+    font-size: 0.75em;
     background-color: #151515;
     font-family: monospace;
     text-align: left;
-    padding: 5px;
-    width: 1200px;
-    height: 35px;
-    display: flex;  /* Make the container a flexbox container */
-    justify-content: space-between; /* Add space between child elements */
+    padding: 0.5em;
+    width: 100%;
+    min-height: 1rem;
+    /* Make the container a flexbox container */
+    justify-content: space-between;
+    /* Add space between child elements */
 }
 
 .TerminalTextContainer {
+    font-size: 0.75em;
     background-color: #262626;
     font-family: monospace;
     text-align: left;
-    padding: 5px;
-    width: 1200px;
-    display: flex;  /* Make the container a flexbox container */
-    justify-content: space-between; /* Add space between child elements */
+    padding: 0.5em;
+    max-width: 100%;
+    /* Make the container a flexbox container */
+    justify-content: space-between;
+    /* Add space between child elements */
 }
 
-.SambaBox, .JellyBox, .XrdpBox {
-    width: 300px;  /* Set desired width */
-    height: 100px; /* Set desired height */
-    border: 3px solid whitesmoke;
+.SambaBox,
+.JellyBox,
+.XrdpBox {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    width: 20%;
+    /* Set desired width */
+    height: 10vh;
+    /* Set desired height */
+    border: 2px solid whitesmoke;
     color: whitesmoke;
-    padding: 10px;
+    min-height: fit-content;
+    min-width: fit-content;
+    max-height: fit-content;
+    padding: 0.5rem;
     border-radius: 1rem;
     background-color: #262626;
     /* Remove float properties as flexbox is used */

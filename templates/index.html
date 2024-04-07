@@ -10,13 +10,13 @@
     <br>
 
     <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Server Status Logo"> 
-    // I want to make this a container aswell, with multiple icons scrolling horizontally
+    <!-- I want to make this a container aswell, with multiple icons scrolling horizontally-->
 
     <h1>Server Status</h1>
     <p>This page displays the status of my media and file server.</p>
     <p>Click the button below to refresh the page.</p>
-    <button name="refresh" type="button" onclick="window.location.reload();">Refresh</button>
-    <div class="container">
+    <button class="refresh" type="button" onclick="window.location.reload();">Refresh</button>
+    <div class="Boxcontainer">
         <div class="SambaBox">
             <h3>Samba Status:</h3>
             <p name="service_dataSMB"> {{ SambaService }} </p>
