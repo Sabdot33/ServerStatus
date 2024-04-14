@@ -1,31 +1,42 @@
 # ServerStatus
 
-## IMPORTANT
+## Important Note:
 
-!! This application was only tested on two operation Systems both based on Ubuntu !!
+* This application has only been tested on Ubuntu-based operating systems.
+* The project is under development and not intended for public distribution. It serves as a personal learning project.
 
-This Project is not finalized yet, might not work and is not intended to become public.
-It's just my hobby to make these kinds of programs.
-To see more from me visit my (WIP) [website](<>)
+## Project Overview
 
-## What is it?
+ServerStatus is a web application designed to deliver real-time monitoring and status updates for servers. It empowers users to view the current health of their servers and track performance metrics
 
-The ServerStatus project is a web application designed to provide real-time monitoring and status information for servers. 
-It allows users to check the current status of their servers, view performance metrics, and receive alerts for any issues detected.
+The objective is to simplify server monitoring, enabling proactive management and swift responses to potential downtimes or performance degradations.
 
-This project aims to help users easily monitor the status and performance of their servers, 
-enabling proactive management and quick response to any potential downtime or performance issues.
-
-Feel free to explore the codebase and improve it or explore with it.
+This specific version focuses on monitoring Jellyfin, XRDP, and Samba, but it can be readily customized to suit individual requirements. Feel free to explore the codebase, make improvements, and experiment with it.
 
 ## Dependencies
 
-**See requirements.txt**
+The required dependencies are listed in the `requirements.txt` file. Here's a general overview:
 
-- Flask
-- Waitress
-- requests
+- Flask (web framework)
+- Waitress (production server)
+- requests (making HTTP requests)
 
-## How to Run
+## Running the Application
 
-To run the application, (create and) initiate the python venv and execute the `main.py` file. Make sure to have the required dependencies installed.
+1. **Set up a Python virtual environment:**
+   - This isolates project dependencies and avoids conflicts. Refer to Python's documentation for virtual environment creation.
+
+2. **Activate the virtual environment.**
+   - Run `python3 -m venv {Name}` to do so 
+
+4. **Install dependencies:**
+   - Within the activated virtual environment, run `pip install -r requirements.txt` to install the necessary libraries.
+
+5. **Run the application:**
+   - Execute `main.py` to start the web application.
+
+**Additional Considerations**
+
+- **Security:** Since this project is not intended for public use, security hasn't been thoroughly implemented. Be cautious when running it in untrusted environments.
+- **Configuration:** To configure what services or apps the focus should be on, simply edit `Jellyfin.py`, `Samba.py` or `Xrdp.py`.
+- **Future Development:** If you plan to share the project in the future, consider adding a roadmap or outlining potential enhancements.
