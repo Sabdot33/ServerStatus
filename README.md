@@ -37,6 +37,6 @@ The required dependencies are listed in the `requirements.txt` file. Here's a ge
 
 **Additional Considerations**
 
-- **Security:** Since this project is not intended for public use, security hasn't been thoroughly implemented. Be cautious when running it in untrusted environments.
+- **Security:** Since this project is not intended for public use, security hasn't been thoroughly implemented. I advise not running it in untrusted environments or being *extremely* careful.
 - **Configuration:** To configure what services or apps the focus should be on, simply edit `Jellyfin.py`, `Samba.py` or `Xrdp.py`.
 - **Future Development:** If you plan to share the project in the future, consider adding a roadmap or outlining potential enhancements.
